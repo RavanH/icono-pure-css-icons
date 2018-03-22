@@ -2,21 +2,21 @@
 Contributors: RavanH, Saeed Alipoor
 Tags: icono, icon, icons, css icons
 Requires at least: 2.6
-Tested up to: 4.2
-Stable tag: 0.3
+Tested up to: 4.9
+Stable tag: 1.0
 
 Add Icono pure CSS icons to your WordPress site.
 
 == Description ==
 
-This lightweight plugin adds the [Icono pure css icons stylesheet](http://saeedalipoor.github.io/icono/) to your WordPress site. 
+This lightweight plugin adds the [Icono pure css icons stylesheet](http://saeedalipoor.github.io/icono/) to your WordPress site.
 
 = Icono =
 
-Icono is an icon pack that needs no external resources except one small stylesheet. No javascript or font pack needed. Any tag can be an made into an icon with **pure CSS** by giving it the appropriate class. 
+Icono is a beautiful icon pack that needs no external resources except one small stylesheet. No javascript or font pack needed. Any tag can be made into an icon with **pure CSS** by giving it the appropriate class.
 Just add an icono class to any type of element that supports the psuedo-element.
 
-Icono was created and is maintained by [Saeed Alipoor](https://github.com/saeedalipoor) and currently features 100 pure CSS icons.
+Icono was created and is maintained by [Saeed Alipoor](https://github.com/saeedalipoor) and currently features 130 pure CSS icons.
 
 = Shortcode =
 
@@ -24,7 +24,7 @@ The shortcodes [icon name] and [icono name] are available for easy insertion of 
 
 There are also the parameters scale, rotation, color and style (for custom styling) available.
 
-= Example = 
+= Example =
 
 To show a big* red arrow pointing left:
 `
@@ -57,15 +57,30 @@ Done!
 
 = Wordpress MU / WordPress 3+ in Multi Site mode =
 
-Same as above but do a **Network Activate** to make the stylesheet and shortcode available on each site on your network. No database tables are created or manipulated and no activation hook needs to be run for it to function with default settings. 
+Same as above but do a **Network Activate** to make the stylesheet and shortcode available on each site on your network. No database tables are created or manipulated and no activation hook needs to be run for it to function with default settings.
 
 
 == Screenshots ==
 
-1. See all available icons on http://saeedalipoor.github.io/icono/
+1. See all 130 available icons and their names on http://saeedalipoor.github.io/icono/
+
+
+== Upgrade Notice ==
+
+= 1.0 =
+Move to latest stylesheet. SSL compatible.
 
 
 == Changelog ==
+
+= 1.0 =
+
+Date: 22 March 2018
+Dev time: 2 hours
+
+* Latest stylesheet now included in plugin
+* SSL compatible
+* Switch to wp_add_inline_style
 
 = 0.3 =
 
@@ -88,4 +103,4 @@ Dev time: 2 hours
 Date: 09 Jan 2015
 Dev time: 1 hour
 
-* Initial plugin to add Icono stylesheet from http://saeedalipoor.github.io/icono/ 
+* Initial plugin to add Icono stylesheet from http://saeedalipoor.github.io/icono/
