@@ -4,8 +4,8 @@ Plugin Name: Icono - Pure CSS icons
 Plugin URI: https://status301.net/wordpress-plugins/icono-pure-css-icons/
 Description: Add the Icono pure CSS icons by Saeed Alipoor to your WordPress site. Use shortcode [icon name] in posts and text widgets. See https://git.io/icono for available icons and their names.
 Author: RavanH, Saeed Alipoor
-Version: 0.3
-Author URI: https://saeedalipoor.github.io/icono/
+Version: 1.0
+Author URI: https://status301.net/
 
 Credits:
 	The Icono pure CSS icons set was created by Saeed Alipoor https://github.com/saeedalipoor/ under the MIT license.
@@ -25,7 +25,7 @@ Plugin License:
 
 
 Icono stylesheet license:
-  Copyright (c) 2014-2015 Saeed Alipoor
+  Copyright (c) 2014-2018 Saeed Alipoor
 	The MIT License (MIT)
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -54,20 +54,13 @@ SOFTWARE.
  */
 function icono_enqueue_scripts()
 {
-	wp_enqueue_style( 'icono-style', 'http://saeedalipoor.github.io/icono/icono.min.css' );
+	wp_enqueue_style( 'icono-style', plugin_dir_url( __FILE__ ) . '/css/icono-master.min.css', array(), '1.3.1' );
+
+	$custom_css = '.icon:before,.icon:after{box-sizing:content-box}';
+	wp_add_inline_style( 'icono-style', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'icono_enqueue_scripts' );
 
-function icono_styles_compat() {
-	echo '
-<style type="text/css">
-.icon:before, .icon:after {
-	box-sizing: content-box;
-}
-</style>
-';
-}
-add_action( 'wp_head', 'icono_styles_compat' );
 
 /**
  * SHORTCODE
