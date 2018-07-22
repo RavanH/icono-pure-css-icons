@@ -4,7 +4,7 @@ Plugin Name: Icono - Pure CSS icons
 Plugin URI: https://status301.net/wordpress-plugins/icono-pure-css-icons/
 Description: Add the Icono pure CSS icons by Saeed Alipoor to your WordPress site. Use shortcode [icon name] in posts and text widgets. See https://git.io/icono for available icons and their names.
 Author: RavanH, Saeed Alipoor
-Version: 1.1
+Version: 1.2
 Author URI: https://status301.net/
 
 Credits:
@@ -52,10 +52,9 @@ SOFTWARE.
  *
  * since v 0.1
  */
-function icono_enqueue_scripts()
-{
-	//wp_enqueue_style( 'icono-style', plugin_dir_url( __FILE__ ) . '/css/icono-v1.3.2.min.css', array(), null );
-	wp_enqueue_style( 'icono-style', 'https://icono-49d6.kxcdn.com/icono.min.css', array(), null );
+function icono_enqueue_scripts() {
+	wp_enqueue_style( 'icono-style', plugin_dir_url( __FILE__ ) . '/css/icono-v1.3.2.min.css', array(), null );
+	//wp_enqueue_style( 'icono-style', 'https://icono-49d6.kxcdn.com/icono.min.css', array(), null );
 
 	$custom_css = '.icon:before,.icon:after{box-sizing:content-box}';
 	wp_add_inline_style( 'icono-style', $custom_css );
@@ -68,8 +67,7 @@ add_action( 'wp_enqueue_scripts', 'icono_enqueue_scripts' );
  *
  * since v 0.1
  */
-function icono_shortcode( $atts )
-{
+function icono_shortcode( $atts ) {
 	// not in feeds
 	if ( is_feed() )
 		return '';
@@ -116,10 +114,13 @@ function icono_shortcode( $atts )
 
 	return '<i class="icon ' . ( strpos($name,'icono-') === 0 ? $name : 'icono-'.$name ) . '"' . ( !empty($style) ? ' style="'.$style.'"' : '' ) . '></i>';
 }
-add_shortcode( 'icon', 'icono_shortcode' );
 add_shortcode( 'icono', 'icono_shortcode' );
+//add_shortcode( 'icon', 'icono_shortcode' );
 
 // allow shortcode in text widgets
-add_filter('widget_text', 'do_shortcode');
+global $wp_version;
+if ( version_compare( $wp_version, '4.9', '<' ) ) {
+	add_filter('widget_text', 'do_shortcode');
+}
 
 // TODO: add tinymce button for easier icon creation
