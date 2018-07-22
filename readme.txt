@@ -3,7 +3,7 @@ Contributors: RavanH, Saeed Alipoor
 Tags: icono, icon, icons, css icons
 Requires at least: 2.6
 Tested up to: 4.9
-Stable tag: 1.3
+Stable tag: 1.4
 
 Add Icono pure CSS icons to your WordPress site.
 
@@ -67,19 +67,20 @@ Same as above but do a **Network Activate** to make the stylesheet and shortcode
 
 == Upgrade Notice ==
 
-= 1.3 =
-Host stylesheet locally for GDPR and Twenty Seventeen compatibility fix
+= 1.4 =
+Host stylesheet locally for GDPR and 2 compatibility fixes
 
 
 == Changelog ==
 
-= 1.3 =
+= 1.4 =
 
 Date: 23 July 2018
 Dev time: 1 hour
 
 * Upgrade to stylesheet v1.3.2
 * Twenty Seventeen compatibility fix
+* Older moz and webkit browser compatibility
 
 = 1.0 =
 

@@ -4,7 +4,7 @@ Plugin Name: Icono - Pure CSS icons
 Plugin URI: https://status301.net/wordpress-plugins/icono-pure-css-icons/
 Description: Add the Icono pure CSS icons by Saeed Alipoor to your WordPress site. Use shortcode [icon name] in posts and text widgets. See https://git.io/icono for available icons and their names.
 Author: RavanH, Saeed Alipoor
-Version: 1.3
+Version: 1.4
 Author URI: https://status301.net/
 
 Credits:
@@ -56,7 +56,7 @@ function icono_enqueue_scripts() {
 	wp_enqueue_style( 'icono-style', plugin_dir_url( __FILE__ ) . 'css/icono-v1.3.2.min.css', array(), null );
 	//wp_enqueue_style( 'icono-style', 'https://icono-49d6.kxcdn.com/icono.min.css', array(), null );
 
-	$custom_css = '.icono:before,.icono:after{box-sizing:content-box}';
+	$custom_css = '.icono:before,.icono:after{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}';
 	wp_add_inline_style( 'icono-style', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'icono_enqueue_scripts' );
