@@ -53,7 +53,7 @@ SOFTWARE.
  * since v 0.1
  */
 function icono_enqueue_scripts() {
-	wp_enqueue_style( 'icono-style', plugin_dir_url( __FILE__ ) . '/css/icono-v1.3.2.min.css', array(), null );
+	wp_enqueue_style( 'icono-style', plugin_dir_url( __FILE__ ) . 'css/icono-v1.3.2.min.css', array(), null );
 	//wp_enqueue_style( 'icono-style', 'https://icono-49d6.kxcdn.com/icono.min.css', array(), null );
 
 	$custom_css = '.icon:before,.icon:after{box-sizing:content-box}';
