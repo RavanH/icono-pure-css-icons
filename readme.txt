@@ -2,7 +2,7 @@
 Contributors: RavanH, Saeed Alipoor
 Tags: icono, icon, icons, css icons
 Requires at least: 2.6
-Tested up to: 5.7
+Tested up to: 5.8
 Stable tag: 1.5
 
 Add Icono pure CSS icons to your WordPress site.
