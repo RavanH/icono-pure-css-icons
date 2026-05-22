@@ -1,9 +1,11 @@
 === Icono - Pure CSS icons ===
-Contributors: RavanH, Saeed Alipoor
+Contributors: RavanH, SaeedAlipoor
 Tags: icono, icon, icons, css icons
 Requires at least: 2.6
 Tested up to: 7.0
 Stable tag: 1.5
+License: MIT
+License URI: https://opensource.org/licenses/MIT
 
 Add Icono pure CSS icons to your WordPress site.
 
