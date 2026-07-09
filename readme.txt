@@ -1,6 +1,7 @@
 === Icono - Pure CSS icons ===
 Contributors: RavanH, SaeedAlipoor
 Tags: icono, icon, icons, css icons
+Donate link: https://donate.stripe.com/6oUbJ10Nz8xYfF7b5qdEs01
 Requires at least: 2.6
 Tested up to: 7.0
 Stable tag: 1.5
